@@ -272,7 +272,7 @@ export class ImageLoader {
       .then((file: FileEntry) => {
         return this.file.moveFile(localDir, tempPath, localDir, localPath);
       })
-      .then((file: Entry) => {
+      .then((file: FileEntry) => {
         if (this.shouldIndex) {
           this.addFileToIndex(file).then(this.maintainCacheSize.bind(this));
         }
